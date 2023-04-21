@@ -24,10 +24,9 @@ export default function Navbar() {
         width: '100%',
         height: '10vh'
       }}
-      key="navbar"
     >
       {options.map((buttonText) => (
-        <Button
+        <Button key={buttonText}
         >
                 <Typography variant="button" style={{ textTransform: 'none', color: "#eee" }} className='text-base'>
                     {buttonText}
