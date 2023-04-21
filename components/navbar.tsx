@@ -15,18 +15,24 @@ export default function Navbar() {
   };
 
   return (
-    <div>
+    <div style={{display: 'flex'}}>
+      <Box sx={{ display: 'flex', justifyContent: 'left', alignItems: 'center', width: '100%', height: '10vh', padding: '0 1rem' }}>
+          <Typography style={{ textTransform: 'none', color: "#eee" }} className='text-base'>
+                    adrianfabisiewicz.pl
+          </Typography>
+        </Box>
       <Box
       sx={{
         display: 'flex',
         justifyContent: 'right',
-        alignItems: 'right',
+        alignItems: 'center',
         width: '100%',
-        height: '10vh'
+        height: '10vh',
+        padding: '0 1rem'
       }}
     >
       {options.map((buttonText) => (
-        <Button key={buttonText}
+        <Button key={buttonText} 
         >
                 <Typography variant="button" style={{ textTransform: 'none', color: "#eee" }} className='text-base'>
                     {buttonText}
