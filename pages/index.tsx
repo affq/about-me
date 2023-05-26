@@ -1,5 +1,4 @@
 import Navbar from "@/components/navbar";
-import Mosaic from "@/components/mosaic";
 import Head from "next/head";
 
 const index = () => {
@@ -10,7 +9,6 @@ const index = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
     <Navbar />
-    <Mosaic />
     </div>
   );
 };

@@ -14,9 +14,9 @@ export default function Navbar() {
 
   return (
     <div style={{display: 'flex'}}>
-      <Box sx={{ display: 'flex', justifyContent: 'left', alignItems: 'center', width: '100%', height: '10vh', padding: '0 1rem' }}>
-          <Typography style={{ textTransform: 'none', color: "#eee" }} className='text-base'>
-                    adrianfabisiewicz.pl
+      <Box sx={{ display: 'flex', justifyContent: 'left', alignItems: 'center', width: '50%', height: '10vh', padding: '0 1rem' }}>
+          <Typography variant="button" style={{ textTransform: 'none', color: "#eee" }} className='text-base'>
+                    <a href="https://www.adrianfabisiewicz.pl">adrianfabisiewicz.pl</a>
           </Typography>
         </Box>
       <Box
@@ -24,7 +24,7 @@ export default function Navbar() {
         display: 'flex',
         justifyContent: 'right',
         alignItems: 'center',
-        width: '100%',
+        width: '50%',
         height: '10vh',
         padding: '0 1rem'
       }}
