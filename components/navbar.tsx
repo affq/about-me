@@ -2,8 +2,7 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
-const options = ['home', 'kontakt'];
+import Link from 'next/link';
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -11,6 +10,11 @@ export default function Navbar() {
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
+  const options = [
+    { buttonText: 'home', link: 'https://adrianfabisiewicz.pl' },
+    { buttonText: 'kontakt', link: 'https://adrianfabisiewicz.pl' },
+  ];
 
   return (
     <div style={{display: 'flex'}}>
@@ -29,11 +33,11 @@ export default function Navbar() {
         padding: '0 1rem'
       }}
     >
-      {options.map((buttonText) => (
-        <Button key={buttonText} 
+      {options.map((option) => (
+        <Button key={option.buttonText} href={option.link}
         >
                 <Typography variant="button" style={{ textTransform: 'none', color: "#eee" }} className='text-base'>
-                    {buttonText}
+                    {option.buttonText}
                 </Typography>
         </Button>
         ))}
